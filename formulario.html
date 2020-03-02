@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<script type="text/javascript" src="validacion.js"></script>
+	<title>Contacto</title>
+</head>
+<body>
+	<header>
+		<h1>Evaluación VII: Validación de formularios</h1>
+	</header>
+<section id="contenido">
+	<form id="formulario" method="post" action="#">
+		<div id="formitem">
+			<label>Nombre:</label>
+			<input id = "nombre" type="text" name="nombre" placeholder="Ingrese su nombre" minlength="2" maxlength="40" pattern="[A-Za-z]+" title="Ingrese al menos dos letras. No exceda los 40 caracteres." required>
+		</div>
+		<span class = "mensaje_error" id="mensaje_error_nombre"></span>
+		<div id="formitem">
+			<label>Apellido:</label>
+			<input id = "apellido" type="text" name="apellido" placeholder="Ingrese su apellido" minlength="2" maxlength="40" pattern="[A-Za-z]+" title="Ingrese al menos dos letras mayúsculas o minúsculas. No exceda los 40 caracteres." required>
+		</div>
+		<span class = "mensaje_error" id="mensaje_error_apellido"></span>
+		<div id="formitem">
+			<label>Edad:</label>
+			<input id = "edad" type="number" name="edad" pattern="[0-9]+" min = "1" max = "130" title="Ingrese su edad, use caracteres numéricos. Rango de validez: 1-130 años" required>
+		</div>
+		<span class = "mensaje_error" id="mensaje_error_edad"></span>
+		<div id="formitem">
+			<label>E-mail:</label>
+			<input id = "email" type="email" name="email" placeholder="Ingrese su email" title = "Ingrese un formato de email válido" required>
+		</div>
+		<span class = "mensaje_error" id="mensaje_error_email"></span>
+		<div id="formitem">
+			<label>Mensaje:</label><br>
+			<textarea id = "mensaje" name="mensaje" rows="5" placeholder="Escriba aquí su mensaje..." title = "Escriba un mensaje" required></textarea>
+		</div>
+		<span class = "mensaje_error" id="mensaje_error_mensaje"></span>
+		<div id="formitem">
+			<input type="submit" id="boton" name="boton" value="Enviar">
+		</div>
+	</form>
+
+</section>
+</body>
+</html>
